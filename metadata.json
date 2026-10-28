@@ -1,0 +1,6 @@
+{
+  "name": "SindhBio 9 - Sindh Board Class IX Biology Prep & Mock Exam Generator",
+  "description": "Comprehensive Class 9 Biology solution bank and mock exam generator based on Sindh Textbook Board (Jamshoro) curriculum and new board exam pattern.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
