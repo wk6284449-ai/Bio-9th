@@ -1,0 +1,115 @@
+{
+  "year": 2026,
+  "subject": "Biology",
+  "class": "Class 9 (Sindh Board)",
+  "maxMarks": 60,
+  "timeAllowed": "3 Hour",
+  "sections": {
+    "sectionA": [
+      {
+        "id": "mcq-1",
+        "q": "Observation which led scientists take Walter Flemming to propose to existence of chromosomes:",
+        "options": ["Uniform distribution of cytoplasm", "Thread-like structures visible during cell division", "Constant cell size during growth", "Absence of nucleus in dividing cells"],
+        "ans": "Thread-like structures visible during cell division"
+      },
+      {
+        "id": "mcq-2",
+        "q": "The average lifespan of a normal human erythrocyte is:",
+        "options": ["130 days", "100 days", "120 days", "200 days"],
+        "ans": "120 days"
+      },
+      {
+        "id": "mcq-3",
+        "q": "Study of remote past organic life with the help of fossils, is called:",
+        "options": ["Paleontology", "Histology", "Anatomy", "Taxonomy"],
+        "ans": "Paleontology"
+      },
+      {
+        "id": "mcq-4",
+        "q": "The point where the enzyme is most active is known as:",
+        "options": ["Neutral pH", "Basic pH", "Optimum pH", "Acidic pH"],
+        "ans": "Optimum pH"
+      },
+      {
+        "id": "mcq-5",
+        "q": "Sequence which correctly represents events ensuring genetic continuity during the cell cycle:",
+        "options": ["Division → Replication → Distribution", "Replication → Division → Distribution", "Distribution → Replication → Division", "Growth → Distribution → Replication"],
+        "ans": "Replication → Division → Distribution"
+      },
+      {
+        "id": "mcq-6",
+        "q": "Combination of conditions is essential for autotrophic nutrition in green plants:",
+        "options": ["Oxygen, sunlight and proteins", "Carbon dioxide, water and sunlight", "Nitrogen, oxygen and minerals", "Water, proteins and fats"],
+        "ans": "Carbon dioxide, water and sunlight"
+      },
+      {
+        "id": "mcq-7",
+        "q": "Secondary wall is made up of:",
+        "options": ["Cellulose and lignin", "Protein and cellulose", "Cellulose and protein", "Lignin and pectin"],
+        "ans": "Cellulose and lignin"
+      },
+      {
+        "id": "mcq-8",
+        "q": "The movement of organic materials takes place through:",
+        "options": ["Vessels", "Phloem", "Tracheids", "Xylem"],
+        "ans": "Phloem"
+      },
+      {
+        "id": "mcq-9",
+        "q": "Deficiency of vitamin K causes:",
+        "options": ["Anemia", "Rickets", "Beri Beri", "Scurvy"],
+        "ans": "Bleeding disorder (Note: Correct answer is bleeding disorder, which is not given in the options)"
+      },
+      {
+        "id": "mcq-10",
+        "q": "Biological name of frog is:",
+        "options": ["Palaeon", "Rana tigrina", "Periplaneta", "Pheretina"],
+        "ans": "Rana tigrina"
+      },
+      {
+        "id": "mcq-11",
+        "q": "Mitosis is best defined as:",
+        "options": ["Reduction division producing haploid cells", "Division of a cell producing two genetically identical daughter cells", "Fusion of two gametes", "Formation of proteins in the cell"],
+        "ans": "Division of a cell producing two genetically identical daughter cells"
+      },
+      {
+        "id": "mcq-12",
+        "q": "Symptoms of magnesium deficiency in plants include:",
+        "options": ["Leaf chlorosis", "Stem thickening", "Increased flow early", "Root hair disappearance"],
+        "ans": "Leaf chlorosis"
+      }
+    ],
+    "sectionB": {
+      "title": "Section B: Short Answer Questions",
+      "totalMarks": 24,
+      "instruction": "Attempt any EIGHT questions from this section. Each question carries Three (3) marks.",
+      "questions": [
+        "Mitochondria are called the 'Power house of the cell'. Explain it in three points.",
+        "Write the three differences between apoptosis and necrosis.",
+        "Define Biodiversity and explain the importance of it.",
+        "What is cell theory? And state its postulates.",
+        "Define the following: (i) Heterotrophic nutrition (ii) Vitamins (iii) Biotechnology",
+        "Write any three effects of malnutrition in human.",
+        "Define Karyokinesis and describe the main events of prophase mitosis.",
+        "State the important carbohydrates in the continuation of life processes in living organisms.",
+        "Explain the composition and importance of Plasma in blood.",
+        "Describe the relationship of Biology with any other three science branches.",
+        "Draw neat and labelled diagram of a plant cell.",
+        "State the causes of deforestation and its effects on biodiversity."
+      ]
+    },
+    "sectionC": {
+      "title": "Section C: Detailed Answer Questions",
+      "totalMarks": 24,
+      "instruction": "Attempt any FOUR questions from this section. Each question carries SIX (6) marks.",
+      "questions": [
+        "Draw neat and labelled diagram of Human Alimentary canal.",
+        "Define enzyme. Describe the characteristics of it.",
+        "Define mitosis, write its different stages and explain any two of them.",
+        "Describe simple permanent tissues in detail.",
+        "Describe pulmonary and systemic circulation of blood in the human heart and state their importance.",
+        "Define respiration. Write aerobic and anaerobic respiration with chemical equations."
+      ]
+    }
+  }
+}
