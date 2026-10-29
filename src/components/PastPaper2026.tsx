@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import modelAnswers from '../../data/modelAnswers.json';
 
 interface PaperQuestion {
   id?: string;
-  q?: string;
+  q: string;
   options?: string[];
   ans?: string;
+}
+
+interface SolvedQuestion {
+  q: string;
+  a: string[];
+}
+
+interface PaperSection {
+  title: string;
+  totalMarks: number;
+  instruction: string;
+  questions?: string[];
+  solutions?: SolvedQuestion[];
 }
 
 interface PaperData {
@@ -16,13 +28,10 @@ interface PaperData {
   timeAllowed: string;
   sections: {
     sectionA: PaperQuestion[];
-    sectionB: { title: string; totalMarks: number; instruction: string; questions: string[] };
-    sectionC: { title: string; totalMarks: number; instruction: string; questions: string[] };
+    sectionB: PaperSection;
+    sectionC: PaperSection;
   };
 }
-
-type AnswerMap = Record<string, string[]>;
-const answers = modelAnswers as AnswerMap;
 
 export const PastPaper2026: React.FC = () => {
   const [paper, setPaper] = useState<PaperData | null>(null);
@@ -55,16 +64,14 @@ export const PastPaper2026: React.FC = () => {
     return <div className="bg-white rounded-2xl border border-slate-200 p-6 text-slate-600">Loading 2026 past paper…</div>;
   }
 
-  const renderAnswerDrawer = (question: string) => {
-    const answer = answers[question];
-    if (!answer) return null;
-    const isOpen = Boolean(openAnswers[question]);
+  const renderAnswerDrawer = (question: SolvedQuestion) => {
+    const isOpen = Boolean(openAnswers[question.q]);
 
     return (
       <div className="mt-3">
         <button
           type="button"
-          onClick={() => toggleAnswer(question)}
+          onClick={() => toggleAnswer(question.q)}
           className="w-full flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-left font-semibold text-emerald-800 hover:bg-emerald-100 transition"
           aria-expanded={isOpen}
         >
@@ -73,12 +80,27 @@ export const PastPaper2026: React.FC = () => {
         </button>
         {isOpen && (
           <div className="mt-2 rounded-xl border border-emerald-100 bg-white px-4 py-3 text-sm text-slate-700 space-y-2">
-            {answer.map((point, index) => <p key={index}>{point}</p>)}
+            {question.a.map((point, index) => <p key={index}>{point}</p>)}
           </div>
         )}
       </div>
     );
   };
+
+  const renderSolvedSection = (section: PaperSection) => (
+    <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+      <h3 className="text-xl font-bold text-slate-900">{section.title}</h3>
+      <p className="text-sm text-slate-500 mb-4">{section.instruction}</p>
+      <ol className="list-decimal pl-5 space-y-4 text-slate-700">
+        {(section.solutions ?? []).map((question, index) => (
+          <li key={`${question.q}-${index}`}>
+            <div>{question.q}</div>
+            {renderAnswerDrawer(question)}
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
 
   return (
     <div className="space-y-6">
@@ -86,7 +108,7 @@ export const PastPaper2026: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-wider text-emerald-700">Sindh Textbook Board • Class 9</p>
-            <h2 className="text-2xl font-bold font-serif text-slate-900">2026 Biology Past Paper</h2>
+            <h2 className="text-2xl font-bold font-serif text-slate-900">{paper.year} Biology Past Paper</h2>
             <p className="text-sm text-slate-600 mt-1">{paper.class} • {paper.subject}</p>
           </div>
           <div className="text-sm font-semibold text-slate-700 bg-slate-50 rounded-xl px-4 py-3 border border-slate-200">
@@ -97,7 +119,7 @@ export const PastPaper2026: React.FC = () => {
 
       <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
         <h3 className="text-xl font-bold text-slate-900">Section A — MCQs</h3>
-        <p className="text-sm text-slate-500 mb-5">12 multiple-choice questions</p>
+        <p className="text-sm text-slate-500 mb-5">{paper.sections.sectionA.length} multiple-choice questions</p>
         <div className="space-y-5">
           {paper.sections.sectionA.map((item, index) => (
             <div key={item.id ?? index} className="border-b border-slate-100 pb-5 last:border-0 last:pb-0">
@@ -115,31 +137,8 @@ export const PastPaper2026: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h3 className="text-xl font-bold text-slate-900">{paper.sections.sectionB.title}</h3>
-        <p className="text-sm text-slate-500 mb-4">{paper.sections.sectionB.instruction}</p>
-        <ol className="list-decimal pl-5 space-y-4 text-slate-700">
-          {paper.sections.sectionB.questions.map((question, index) => (
-            <li key={index}>
-              <div>{question}</div>
-              {renderAnswerDrawer(question)}
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h3 className="text-xl font-bold text-slate-900">{paper.sections.sectionC.title}</h3>
-        <p className="text-sm text-slate-500 mb-4">{paper.sections.sectionC.instruction}</p>
-        <ol className="list-decimal pl-5 space-y-4 text-slate-700">
-          {paper.sections.sectionC.questions.map((question, index) => (
-            <li key={index}>
-              <div>{question}</div>
-              {renderAnswerDrawer(question)}
-            </li>
-          ))}
-        </ol>
-      </section>
+      {renderSolvedSection(paper.sections.sectionB)}
+      {renderSolvedSection(paper.sections.sectionC)}
     </div>
   );
 };
