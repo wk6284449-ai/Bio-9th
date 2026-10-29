@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface PaperQuestion {
   id?: string;
@@ -13,8 +13,8 @@ interface SolvedQuestion {
 }
 
 interface PaperSection {
-  title: string;
-  totalMarks: number;
+  title?: string;
+  totalMarks?: number;
   instruction: string;
   questions?: string[];
   solutions?: SolvedQuestion[];
@@ -33,18 +33,28 @@ interface PaperData {
   };
 }
 
+const years = [2026, 2025, 2024, 2023, 2022];
+
 export const PastPaper2026: React.FC = () => {
-  const [paper, setPaper] = useState<PaperData | null>(null);
+  const [papers, setPapers] = useState<Record<number, PaperData>>({});
+  const [selectedYear, setSelectedYear] = useState(2026);
   const [error, setError] = useState(false);
   const [openAnswers, setOpenAnswers] = useState<Record<string, boolean>>({});
 
-  React.useEffect(() => {
-    fetch('/data/paper2026.json')
-      .then((response) => {
-        if (!response.ok) throw new Error('Paper not found');
-        return response.json();
+  useEffect(() => {
+    Promise.all([
+      fetch('/data/paper2026.json').then((r) => {
+        if (!r.ok) throw new Error('2026 paper not found');
+        return r.json();
+      }),
+      fetch('/data/pastpapers-2022-2025.json').then((r) => {
+        if (!r.ok) throw new Error('Past papers not found');
+        return r.json();
       })
-      .then(setPaper)
+    ])
+      .then(([paper2026, olderPapers]) => {
+        setPapers({ 2026: paper2026, ...olderPapers });
+      })
       .catch(() => setError(true));
   }, []);
 
@@ -55,23 +65,26 @@ export const PastPaper2026: React.FC = () => {
   if (error) {
     return (
       <div className="bg-white rounded-2xl border border-red-200 p-6 text-red-700">
-        The 2026 past paper could not be loaded. Please refresh the page.
+        The past papers could not be loaded. Please refresh the page.
       </div>
     );
   }
 
+  const paper = papers[selectedYear];
+
   if (!paper) {
-    return <div className="bg-white rounded-2xl border border-slate-200 p-6 text-slate-600">Loading 2026 past paper…</div>;
+    return <div className="bg-white rounded-2xl border border-slate-200 p-6 text-slate-600">Loading past papers…</div>;
   }
 
   const renderAnswerDrawer = (question: SolvedQuestion) => {
-    const isOpen = Boolean(openAnswers[question.q]);
+    const key = `${selectedYear}-${question.q}`;
+    const isOpen = Boolean(openAnswers[key]);
 
     return (
       <div className="mt-3">
         <button
           type="button"
-          onClick={() => toggleAnswer(question.q)}
+          onClick={() => toggleAnswer(key)}
           className="w-full flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-left font-semibold text-emerald-800 hover:bg-emerald-100 transition"
           aria-expanded={isOpen}
         >
@@ -87,28 +100,60 @@ export const PastPaper2026: React.FC = () => {
     );
   };
 
-  const renderSolvedSection = (section: PaperSection) => (
+  const renderSection = (section: PaperSection, label: string) => (
     <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-      <h3 className="text-xl font-bold text-slate-900">{section.title}</h3>
+      <h3 className="text-xl font-bold text-slate-900">{section.title ?? label}</h3>
       <p className="text-sm text-slate-500 mb-4">{section.instruction}</p>
-      <ol className="list-decimal pl-5 space-y-4 text-slate-700">
-        {(section.solutions ?? []).map((question, index) => (
-          <li key={`${question.q}-${index}`}>
-            <div>{question.q}</div>
-            {renderAnswerDrawer(question)}
-          </li>
-        ))}
-      </ol>
+
+      {section.solutions?.length ? (
+        <ol className="list-decimal pl-5 space-y-4 text-slate-700">
+          {section.solutions.map((question, index) => (
+            <li key={`${question.q}-${index}`}>
+              <div>{question.q}</div>
+              {renderAnswerDrawer(question)}
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <ol className="list-decimal pl-5 space-y-3 text-slate-700">
+          {(section.questions ?? []).map((question, index) => (
+            <li key={`${question}-${index}`}>{question}</li>
+          ))}
+        </ol>
+      )}
     </section>
   );
 
   return (
     <div className="space-y-6">
+      <div className="bg-white rounded-2xl border border-amber-200 shadow-sm p-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-emerald-700">Sindh Textbook Board • Class 9</p>
+            <h2 className="text-2xl font-bold font-serif text-slate-900">Biology Past Papers</h2>
+            <p className="text-sm text-slate-600 mt-1">2022–2026 • MCQs, short questions and detailed questions</p>
+          </div>
+          <div className="flex flex-wrap gap-2" role="tablist" aria-label="Past paper year">
+            {years.map((year) => (
+              <button
+                key={year}
+                type="button"
+                role="tab"
+                aria-selected={selectedYear === year}
+                onClick={() => setSelectedYear(year)}
+                className={`px-4 py-2 rounded-xl text-sm font-bold border transition ${selectedYear === year ? 'bg-amber-50 text-amber-800 border-amber-300' : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'}`}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="bg-white rounded-2xl border border-emerald-200 shadow-sm p-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
-            <p className="text-xs font-bold uppercase tracking-wider text-emerald-700">Sindh Textbook Board • Class 9</p>
-            <h2 className="text-2xl font-bold font-serif text-slate-900">{paper.year} Biology Past Paper</h2>
+            <h3 className="text-xl font-bold text-slate-900">{paper.year} Biology Past Paper</h3>
             <p className="text-sm text-slate-600 mt-1">{paper.class} • {paper.subject}</p>
           </div>
           <div className="text-sm font-semibold text-slate-700 bg-slate-50 rounded-xl px-4 py-3 border border-slate-200">
@@ -137,8 +182,8 @@ export const PastPaper2026: React.FC = () => {
         </div>
       </section>
 
-      {renderSolvedSection(paper.sections.sectionB)}
-      {renderSolvedSection(paper.sections.sectionC)}
+      {renderSection(paper.sections.sectionB, 'Section B — Short Answer Questions')}
+      {renderSection(paper.sections.sectionC, 'Section C — Detailed Answer Questions')}
     </div>
   );
 };
