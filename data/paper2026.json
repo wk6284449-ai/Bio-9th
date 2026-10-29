@@ -3,112 +3,50 @@
   "subject": "Biology",
   "class": "Class 9 (Sindh Board)",
   "maxMarks": 60,
-  "timeAllowed": "3 Hour",
+  "timeAllowed": "3 Hours",
   "sections": {
     "sectionA": [
-      {
-        "id": "mcq-1",
-        "q": "Observation which led scientists take Walter Flemming to propose to existence of chromosomes:",
-        "options": ["Uniform distribution of cytoplasm", "Thread-like structures visible during cell division", "Constant cell size during growth", "Absence of nucleus in dividing cells"],
-        "ans": "Thread-like structures visible during cell division"
-      },
-      {
-        "id": "mcq-2",
-        "q": "The average lifespan of a normal human erythrocyte is:",
-        "options": ["130 days", "100 days", "120 days", "200 days"],
-        "ans": "120 days"
-      },
-      {
-        "id": "mcq-3",
-        "q": "Study of remote past organic life with the help of fossils, is called:",
-        "options": ["Paleontology", "Histology", "Anatomy", "Taxonomy"],
-        "ans": "Paleontology"
-      },
-      {
-        "id": "mcq-4",
-        "q": "The point where the enzyme is most active is known as:",
-        "options": ["Neutral pH", "Basic pH", "Optimum pH", "Acidic pH"],
-        "ans": "Optimum pH"
-      },
-      {
-        "id": "mcq-5",
-        "q": "Sequence which correctly represents events ensuring genetic continuity during the cell cycle:",
-        "options": ["Division → Replication → Distribution", "Replication → Division → Distribution", "Distribution → Replication → Division", "Growth → Distribution → Replication"],
-        "ans": "Replication → Division → Distribution"
-      },
-      {
-        "id": "mcq-6",
-        "q": "Combination of conditions is essential for autotrophic nutrition in green plants:",
-        "options": ["Oxygen, sunlight and proteins", "Carbon dioxide, water and sunlight", "Nitrogen, oxygen and minerals", "Water, proteins and fats"],
-        "ans": "Carbon dioxide, water and sunlight"
-      },
-      {
-        "id": "mcq-7",
-        "q": "Secondary wall is made up of:",
-        "options": ["Cellulose and lignin", "Protein and cellulose", "Cellulose and protein", "Lignin and pectin"],
-        "ans": "Cellulose and lignin"
-      },
-      {
-        "id": "mcq-8",
-        "q": "The movement of organic materials takes place through:",
-        "options": ["Vessels", "Phloem", "Tracheids", "Xylem"],
-        "ans": "Phloem"
-      },
-      {
-        "id": "mcq-9",
-        "q": "Deficiency of vitamin K causes:",
-        "options": ["Anemia", "Rickets", "Beri Beri", "Scurvy"],
-        "ans": "Bleeding disorder (Note: Correct answer is bleeding disorder, which is not given in the options)"
-      },
-      {
-        "id": "mcq-10",
-        "q": "Biological name of frog is:",
-        "options": ["Palaeon", "Rana tigrina", "Periplaneta", "Pheretina"],
-        "ans": "Rana tigrina"
-      },
-      {
-        "id": "mcq-11",
-        "q": "Mitosis is best defined as:",
-        "options": ["Reduction division producing haploid cells", "Division of a cell producing two genetically identical daughter cells", "Fusion of two gametes", "Formation of proteins in the cell"],
-        "ans": "Division of a cell producing two genetically identical daughter cells"
-      },
-      {
-        "id": "mcq-12",
-        "q": "Symptoms of magnesium deficiency in plants include:",
-        "options": ["Leaf chlorosis", "Stem thickening", "Increased flow early", "Root hair disappearance"],
-        "ans": "Leaf chlorosis"
-      }
+      { "id": "26-1", "q": "Observation which led scientists take Walter Flemming to propose to existence of chromosomes:", "options": ["Uniform distribution of cytoplasm", "Thread-like structures visible during cell division", "Constant cell size during growth", "Absence of nucleus in dividing cells"], "ans": "Thread-like structures visible during cell division" },
+      { "id": "26-2", "q": "The average lifespan of a normal human erythrocyte is:", "options": ["130 days", "100 days", "120 days", "200 days"], "ans": "120 days" },
+      { "id": "26-3", "q": "Study of remote past organic life with the help of fossils, is called:", "options": ["Paleontology", "Histology", "Anatomy", "Taxonomy"], "ans": "Paleontology" },
+      { "id": "26-4", "q": "The point where the enzyme is most active is known as:", "options": ["Neutral pH", "Basic pH", "Optimum pH", "Acidic pH"], "ans": "Optimum pH" },
+      { "id": "26-5", "q": "Sequence which correctly represents events ensuring genetic continuity during the cell cycle:", "options": ["Division → Replication → Distribution", "Replication → Division → Distribution", "Distribution → Replication → Division", "Growth → Distribution → Replication"], "ans": "Replication → Division → Distribution" },
+      { "id": "26-6", "q": "Combination of conditions is essential for autotrophic nutrition in green plants:", "options": ["Oxygen, sunlight and proteins", "Carbon dioxide, water and sunlight", "Nitrogen, oxygen and minerals", "Water, proteins and fats"], "ans": "Carbon dioxide, water and sunlight" },
+      { "id": "26-7", "q": "Secondary wall is made up of:", "options": ["Cellulose and lignin", "Protein and cellulose", "Cellulose and protein", "Lignin and pectin"], "ans": "Cellulose and lignin" },
+      { "id": "26-8", "q": "The movement of organic materials takes place through:", "options": ["Vessels", "Phloem", "Tracheids", "Xylem"], "ans": "Phloem" },
+      { "id": "26-9", "q": "Deficiency of vitamin K causes:", "options": ["Anemia", "Rickets", "Beri Beri", "Scurvy"], "ans": "Bleeding disorder (Note: Not present in original paper options, correct answer injected)" },
+      { "id": "26-10", "q": "Biological name of frog is:", "options": ["Palaeon", "Rana tigrina", "Periplaneta", "Pheretina"], "ans": "Rana tigrina" },
+      { "id": "26-11", "q": "Mitosis is best defined as:", "options": ["Reduction division producing haploid cells", "Division of a cell producing two genetically identical daughter cells", "Fusion of two gametes", "Formation of proteins in the cell"], "ans": "Division of a cell producing two genetically identical daughter cells" },
+      { "id": "26-12", "q": "Symptoms of magnesium deficiency in plants include:", "options": ["Leaf chlorosis", "Stem thickening", "Increased flow early", "Root hair disappearance"], "ans": "Leaf chlorosis" }
     ],
     "sectionB": {
-      "title": "Section B: Short Answer Questions",
-      "totalMarks": 24,
-      "instruction": "Attempt any EIGHT questions from this section. Each question carries Three (3) marks.",
-      "questions": [
-        "Mitochondria are called the 'Power house of the cell'. Explain it in three points.",
-        "Write the three differences between apoptosis and necrosis.",
-        "Define Biodiversity and explain the importance of it.",
-        "What is cell theory? And state its postulates.",
-        "Define the following: (i) Heterotrophic nutrition (ii) Vitamins (iii) Biotechnology",
-        "Write any three effects of malnutrition in human.",
-        "Define Karyokinesis and describe the main events of prophase mitosis.",
-        "State the important carbohydrates in the continuation of life processes in living organisms.",
-        "Explain the composition and importance of Plasma in blood.",
-        "Describe the relationship of Biology with any other three science branches.",
-        "Draw neat and labelled diagram of a plant cell.",
-        "State the causes of deforestation and its effects on biodiversity."
+      "title": "Section B: Short Answer Questions (Marks: 24)",
+      "instruction": "Attempt any EIGHT questions from this section. Each question carries 3 marks.",
+      "solutions": [
+        { "q": "2. Mitochondria are called the 'Power house of the cell'. Explain it in three points.", "a": ["1. They are double-membrane structures responsible for carrying out cellular aerobic respiration.", "2. They synthesize Adenosine Triphosphate (ATP), which acts as the official energy currency for all cellular tasks.", "3. They store metabolic energy temporarily and release it automatically whenever the cell needs to perform operations like division."] },
+        { "q": "3. Write the three differences between apoptosis and necrosis.", "a": ["• Apoptosis is programmed cell death (cell suicide) triggered by internal signals.", "• Necrosis is accidental cell death caused by sudden external damage like injuries or toxins.", "• Apoptosis does not cause localized inflammation, whereas necrosis causes the cell to burst, causing painful swelling."] },
+        { "q": "4. Define Biodiversity and explain the importance of it.", "a": ["• Definition: The degree of variation within or among the biological species existing on different regions of the earth.", "• Importance: It provides essential daily survival products including food, fiber, oil, timber, paper, and natural medicinal drugs."] },
+        { "q": "5. What is cell theory? And state its postulates.", "a": ["• Definition: A core principle of biology stating that cells form the fundamental structural unit of all life forms.", "• Postulate 1: All living organisms are composed of one or more microscopic cells.", "• Postulate 2: The cell is the basic structural, functional, and organizational unit of life.", "• Postulate 3: New cells arise exclusively from pre-existing cells through cell division."] },
+        { "q": "6. Define the following: (i) Heterotrophic nutrition (ii) Vitamins (iii) Biotechnology", "a": ["• (i) Heterotrophic nutrition: A mode where organisms cannot manufacture their own food and must depend on other organic materials.", "• (ii) Vitamins: Vital chemical compounds required in tiny portions to maintain proper cellular metabolism.", "• (iii) Biotechnology: The study about techniques for genetic manipulation to achieve desirable characters."] },
+        { "q": "7. Write any three effects of malnutrition in human.", "a": ["1. Triggers severe nutrient deficiency conditions like Kwashiorkor, Scurvy, or Marasmus.", "2. Causes severe physical growth delays and skeletal muscle wasting.", "3. Weakens the immune system, making the body vulnerable to infectious diseases."] },
+        { "q": "8. Define Karyokinesis and describe the main events of prophase mitosis.", "a": ["• Karyokinesis Definition: The biological process dividing a cell nucleus during cellular division.", "• Prophase Events: Chromatin networks condense into visible thread chromosomes, the nuclear membrane breaks down, and spindle lines start spreading across cell poles."] },
+        { "q": "9. State the important carbohydrates in the continuation of life processes in living organisms.", "a": ["• Glucose: The essential micro-molecule serving as an instant power source for respiration.", "• Cellulose: A tough compound providing structure to the plant cell wall cell framework.", "• Starch: Used by organisms to store excess carbohydrate energy safely for future use."] },
+        { "q": "10. Explain the composition and importance of Plasma in blood.", "a": ["• Composition: The fluid matrix consisting of 90% water mixed with salts, dissolved proteins, and waste.", "• Importance: Acts as a distribution medium to circulate nutrients, defensive antibodies, and metabolic signals."] },
+        { "q": "11. Describe the relationship of Biology with any other three science branches.", "a": ["1. Biophysics: Applying physical laws to life systems (e.g., sound waves in ultrasound or carbon dating fossils).", "2. Biochemistry: Studying chemical molecules (proteins, lipids) that build up living cell bodies.", "3. Biomathematics: The collection and mathematical analysis of biological experimental data arrays."] },
+        { "q": "12. Draw neat and labelled diagram of a plant cell.", "a": ["• Interactive Target: Display this reference checklist to students: Cell Wall, Plasma Membrane, Large Vacuole, Nucleus, Chloroplasts, and Cytoplasm."] },
+        { "q": "13. State the causes of deforestation and its effects on biodiversity.", "a": ["• Causes: Clearing forest lines for human housing projects, logging timber, and creating agricultural farmlands.", "• Effects: Completely wipes out natural animal habitats, pushing vulnerable species toward extinction."] }
       ]
     },
     "sectionC": {
-      "title": "Section C: Detailed Answer Questions",
-      "totalMarks": 24,
-      "instruction": "Attempt any FOUR questions from this section. Each question carries SIX (6) marks.",
-      "questions": [
-        "Draw neat and labelled diagram of Human Alimentary canal.",
-        "Define enzyme. Describe the characteristics of it.",
-        "Define mitosis, write its different stages and explain any two of them.",
-        "Describe simple permanent tissues in detail.",
-        "Describe pulmonary and systemic circulation of blood in the human heart and state their importance.",
-        "Define respiration. Write aerobic and anaerobic respiration with chemical equations."
+      "title": "Section C: Detailed Answer Questions (Marks: 24)",
+      "instruction": "Attempt any FOUR questions from this section. Each question carries 6 marks.",
+      "solutions": [
+        { "q": "14. Draw neat and labelled diagram of Human Alimentary canal.", "a": ["• Target Checklist: Mouth, Pharynx, Esophagus, Stomach, Small Intestine, Large Intestine, Liver, Pancreas, and Rectum."] },
+        { "q": "15. Define enzyme. Describe the characteristics of it.", "a": ["• Definition: Specialized biological proteins acting as catalysts to speed up reactions without being consumed.", "• Characteristics: Highly specific (only matches target substrates), heavily dependent on a perfect environment (Optimum pH and temperature points). Encycle rates drop if rules shift."] },
+        { "q": "16. Define mitosis, write its different stages and explain any two of them.", "a": ["• Definition: Division where a parental cell yields two identical clones.", "• Four Stages: Prophase, Metaphase, Anaphase, and Telophase.", "• Metaphase: Chromosomes align along the center plate attaching to spindle tracks.", "• Anaphase: Chromatids break apart as shorten lines drag them to extreme ends."] },
+        { "q": "17. Describe simple permanent tissues in detail.", "a": ["• Definition: Matured cells that perform fixed singular operations in plants.", "• Parenchyma: Thin walls specialized for storage and green photosynthesis tasks.", "• Collenchyma: Provides bendable strength to growing stems due to angular walls.", "• Sclerenchyma: Rigid dead cells with thick secondary lignin walls for hard structural support."] },
+        { "q": "18. Describe pulmonary and systemic circulation of blood in the human heart and state their importance.", "a": ["• Pulmonary Circulation: Deoxygenated blood exits the right ventricle into the lung fields for oxygen extraction and returns to the left atrium.", "• Systemic Circulation: Oxygen-rich blood pumps from the left ventricle through the main aorta to feed body tissues, returning dark back to the right atrium."] },
+        { "q": "19. Define respiration. Write aerobic and anaerobic respiration with chemical equations.", "a": ["• Definition: Cellular chemical breakdown yielding high-energy ATP units.", "• Aerobic (With Oxygen): C6H12O6 + 6O2 → 6CO2 + 6H2O + ATP Energy.", "• Anaerobic (No Oxygen): C6H12O6 → 2C2H5OH (Ethanol) + 2CO2 + ATP Energy."] }
       ]
     }
   }
