@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 // 📝 MASTER EMAIL LIST: ADD OR REMOVE EMAILS HERE
 // ==========================================
 const ALLOWED_EMAILS: string[] = [
-  "ik0690915@gmail.com.com",
-  "medcormedcor74@gmail.co.com",
+  "ik0690915@gmail.com",
+  "medcormedcor74@gmail.com",
   "student2@example.com"
 ];
 
