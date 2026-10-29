@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import modelAnswers from '../../data/modelAnswers.json';
 
 interface PaperQuestion {
   id?: string;
@@ -20,11 +21,15 @@ interface PaperData {
   };
 }
 
+type AnswerMap = Record<string, string[]>;
+const answers = modelAnswers as AnswerMap;
+
 export const PastPaper2026: React.FC = () => {
   const [paper, setPaper] = useState<PaperData | null>(null);
   const [error, setError] = useState(false);
+  const [openAnswers, setOpenAnswers] = useState<Record<string, boolean>>({});
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetch('/data/paper2026.json')
       .then((response) => {
         if (!response.ok) throw new Error('Paper not found');
@@ -33,6 +38,10 @@ export const PastPaper2026: React.FC = () => {
       .then(setPaper)
       .catch(() => setError(true));
   }, []);
+
+  const toggleAnswer = (question: string) => {
+    setOpenAnswers((current) => ({ ...current, [question]: !current[question] }));
+  };
 
   if (error) {
     return (
@@ -45,6 +54,31 @@ export const PastPaper2026: React.FC = () => {
   if (!paper) {
     return <div className="bg-white rounded-2xl border border-slate-200 p-6 text-slate-600">Loading 2026 past paper…</div>;
   }
+
+  const renderAnswerDrawer = (question: string) => {
+    const answer = answers[question];
+    if (!answer) return null;
+    const isOpen = Boolean(openAnswers[question]);
+
+    return (
+      <div className="mt-3">
+        <button
+          type="button"
+          onClick={() => toggleAnswer(question)}
+          className="w-full flex items-center justify-between rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-left font-semibold text-emerald-800 hover:bg-emerald-100 transition"
+          aria-expanded={isOpen}
+        >
+          <span>{isOpen ? 'Hide Model Answer' : 'Show Model Answer'}</span>
+          <span className="text-lg">{isOpen ? '−' : '+'}</span>
+        </button>
+        {isOpen && (
+          <div className="mt-2 rounded-xl border border-emerald-100 bg-white px-4 py-3 text-sm text-slate-700 space-y-2">
+            {answer.map((point, index) => <p key={index}>{point}</p>)}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div className="space-y-6">
@@ -84,16 +118,26 @@ export const PastPaper2026: React.FC = () => {
       <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
         <h3 className="text-xl font-bold text-slate-900">{paper.sections.sectionB.title}</h3>
         <p className="text-sm text-slate-500 mb-4">{paper.sections.sectionB.instruction}</p>
-        <ol className="list-decimal pl-5 space-y-3 text-slate-700">
-          {paper.sections.sectionB.questions.map((question, index) => <li key={index}>{question}</li>)}
+        <ol className="list-decimal pl-5 space-y-4 text-slate-700">
+          {paper.sections.sectionB.questions.map((question, index) => (
+            <li key={index}>
+              <div>{question}</div>
+              {renderAnswerDrawer(question)}
+            </li>
+          ))}
         </ol>
       </section>
 
       <section className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
         <h3 className="text-xl font-bold text-slate-900">{paper.sections.sectionC.title}</h3>
         <p className="text-sm text-slate-500 mb-4">{paper.sections.sectionC.instruction}</p>
-        <ol className="list-decimal pl-5 space-y-3 text-slate-700">
-          {paper.sections.sectionC.questions.map((question, index) => <li key={index}>{question}</li>)}
+        <ol className="list-decimal pl-5 space-y-4 text-slate-700">
+          {paper.sections.sectionC.questions.map((question, index) => (
+            <li key={index}>
+              <div>{question}</div>
+              {renderAnswerDrawer(question)}
+            </li>
+          ))}
         </ol>
       </section>
     </div>
