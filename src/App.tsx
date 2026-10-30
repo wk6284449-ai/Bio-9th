@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Header, ActiveTab } from './components/Header';
 import { SolutionExplorer } from './components/SolutionExplorer';
 import { DifferencesViewer } from './components/DifferencesViewer';
@@ -104,6 +105,7 @@ export default function App() {
 
       <MockExamModal isOpen={isMockModalOpen} onClose={() => setIsMockModalOpen(false)} onGenerate={handleGenerateExam} preselectedChapter={preselectedCh} />
       <BoardPolicyModal isOpen={isPolicyModalOpen} onClose={() => setIsPolicyModalOpen(false)} />
+      <Analytics />
     </div>
   );
 }
