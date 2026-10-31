@@ -1,0 +1,60 @@
+{
+  "board": "Sindh Textbook Board",
+  "class": 9,
+  "subject": "Biology",
+  "chapter": 1,
+  "title": "Introduction to Biology",
+  "mcqs": [
+    {"q":"A localized group of organisms that belong to the same species is called a:","options":{"a":"Biosphere","b":"Community","c":"Ecosystem","d":"Population"},"answer":"d","why":"All members of a species living in a specific habitat are called a population."},
+    {"q":"Increased quantity and quality of fish production:","options":{"a":"Fisheries","b":"Farming","c":"Animal husbandry","d":"Forestry"},"answer":"a","why":"Fisheries deals with increased quantity and quality of fish production."},
+    {"q":"Study of remote past organic life, with the help of fossils.","options":{"a":"Entomology","b":"Paleontology","c":"Taxonomy","d":"Histology"},"answer":"b","why":"Paleontology is the study of remote past organic life with the help of fossils."},
+    {"q":"Laws and techniques of physics are applied to explain the living processes of life.","options":{"a":"Biometry","b":"Biostatistics","c":"Biophysics","d":"Bio-economics"},"answer":"c","why":"Biophysics applies laws and techniques of physics to explain processes of life."},
+    {"q":"Choose the incorrect statement:","options":{"a":"Six elements such as C, H, O, N, S and P are called basic elements of life.","b":"Foundation of life based on chemicals.","c":"Members of different species form population.","d":"Part of earth where life exists is called biosphere."},"answer":"c","why":"Members of different species form a community. A population is made of members of one species."},
+    {"q":"Science of diagnosis and treatment of diseases.","options":{"a":"Agriculture","b":"Medicine","c":"Surgery","d":"Both B and C"},"answer":"b","why":"The textbook states that medicine deals with diagnosis and treatment of diseases; surgery deals with repair, replacement or removal of the affected organ."},
+    {"q":"Similar cells combine together to form:","options":{"a":"Organs","b":"System","c":"Tissue","d":"Body"},"answer":"c","why":"Similar cells combine together to form tissues."},
+    {"q":"Scientific name of frog is:","options":{"a":"Palaeon","b":"Rana tigrina","c":"Periplaneta","d":"Pheretima"},"answer":"b","why":"Rana tigrina is the biological name of the spotted frog."},
+    {"q":"Select the correct sequence of biological organization.","options":{"a":"Atom → Cell → Tissue → Molecule → Organ","b":"Atom → Tissue → Cell → Molecule → Organ","c":"Atom → Molecule → Cell → Tissue → Organ","d":"Atom → Cell → Molecule → Tissue → Organ"},"answer":"c","why":"The textbook sequence places the molecular level before the cellular and tissue levels."},
+    {"q":"Volvox is a polyphyletic genus of:","options":{"a":"Green algae","b":"Red algae","c":"Brown algae","d":"None of these"},"answer":"a","why":"The textbook describes Volvox as a polyphyletic genus of chlorophyte green algae."}
+  ],
+  "fill_blanks": [
+    {"q":"Techniques for manipulation of gene to achieve desirable characters are called ____.","answer":"Biotechnology"},
+    {"q":"Distribution of different living organisms in different regions of the world ____.","answer":"Biogeography"},
+    {"q":"Part of agriculture for the development of new varieties of plant and their fruit is ____.","answer":"Horticulture"},
+    {"q":"Bio elements considered as vital for life are ____ in members.","answer":"16 (sixteen)","note":"The textbook says 16 elements are bio-elements; only six (C, H, O, N, S, P) are basic elements of life."},
+    {"q":"Members of different species living in specific habitat are called ____.","answer":"Community"},
+    {"q":"The Muslim scientist who identified many diseases like tuberculosis, meningitis and other such inflammations was ____.","answer":"Bu Ali Sina (Avicenna)"},
+    {"q":"Part of earth where life exists is called ____.","answer":"Biosphere"},
+    {"q":"Foundation of life based on ____.","answer":"Chemicals (chemical foundation)"},
+    {"q":"Fish is one of the best source of ____.","answer":"Protein"},
+    {"q":"Radio labeling and carbon dating also show some uses of radioactive isotopes in determining the ____ of fossils.","answer":"Age"}
+  ],
+  "definitions": [
+    {"term":"Anatomy","answer":"The study of internal parts of the body of living organisms by cutting them open."},
+    {"term":"Histology","answer":"The study of the structure of tissues of plants and animals."},
+    {"term":"Immunology","answer":"The study of the body's defence (immune) system against disease.","outside_textbook_pages":true},
+    {"term":"Pharmacology","answer":"The study about the action of drugs."},
+    {"term":"Entomology","answer":"The study of insects.","outside_textbook_pages":true},
+    {"term":"Biometry","answer":"The branch of mathematics which collects data of living organisms. It plays a very important role in research."},
+    {"term":"Biogeography","answer":"The study of the distribution of different living organisms in different geographical regions of the world. Many organisms are restricted to particular regions due to environmental conditions."},
+    {"term":"Surgery","answer":"The branch that deals with repair, replacement or removal of the affected organ."},
+    {"term":"Animal husbandry","answer":"A part of agriculture science that deals with the care and breeding of animals which are beneficial for man."},
+    {"term":"Bioelements","answer":"The 16 elements that are vital for life. Six of them, C, H, O, N, S and P, are the basic elements of life."}
+  ],
+  "differences": [
+    {"title":"Colonial organization and multicellular organization","left":"Colonial organization","right":"Multicellular organization","rows":[["Meaning","Many unicellular organisms live together in a colony","Organism formed by many cells"],["Division of labor","No division of labor; each unicellular organism lives its own life","Cells are organized and work in coordination"],["Dependence","Cells are not dependent on each other","Cells form an organized multicellular body"],["Structure","Never forms a multicellular structure","Forms a multicellular body"],["Example","Volvox","Frog, mustard plant"]]},
+    {"title":"Agriculture and horticulture","left":"Agriculture","right":"Horticulture","rows":[["Meaning","Production of varieties of crops, fruit, vegetables, dairy products etc.","Part of agriculture for development of new varieties of plants and their products"],["Scope","Broad agricultural field","A part of agriculture"]]}
+  ],
+  "short_answers": [
+    {"q":"Why is the subject biology named as a multidimensional subject?","answer":"Biology is linked with other sciences such as physics, chemistry and mathematics. For example, the movement of animals follows the laws of motion in physics. Because it is related to many sciences, it is called a multidimensional, interdisciplinary science."},
+    {"q":"How does the farming profession help mankind?","answer":"Different kinds of farms are developed, such as fish farms, cattle farms and poultry farms. New technologies are used to produce animals as sources of meat, milk, leather and wool."},
+    {"q":"Why is species called the smallest taxonomic level?","answer":"Species is the smallest unit of taxonomic organization. It includes morphologically similar living organisms which inter-breed and produce fertile offspring."},
+    {"q":"How is population different from community?","answer":"A population consists of all members of one species living in a specific habitat. A community consists of members of different species living in a specific habitat."},
+    {"q":"How are new varieties of plants produced?","answer":"Through horticulture, in which work is carried out for the development of new varieties of plants and their products. Biotechnology deals with manipulation of genes to achieve desirable characters."},
+    {"q":"Draw a labeled diagram of frog's digestive system.","answer":"Draw the labelled dissected frog from STBB Fig. 1.4. Use the labels shown in the textbook rather than inventing labels.","needs_diagram":true}
+  ],
+  "long_answers": [
+    {"q":"Describe the role of Muslim scientists in the field of biology.","answer":"Muslim scientists played a great role in the development of biological science. The textbook states that they began experiments and observations from the first century of Hijra.\n\n1. Jabir Bin Hayan (722–817 A.D.): Born in Iran. He worked in chemistry and also wrote books on plants and animals, including Al-Nabatiat and Al-Haywan.\n2. Abdul Malik Asmai (741–828 A.D.): A great zoologist who wrote books on animals, including Al-Kheil on horses, Al-Ibil on camels, Al-Shat on sheep, Al-Wahoosh on wild animals and Khalqul Insan on parts of the human body and their functions.\n3. Bu Ali Sina (980–1037 A.D.): Considered the founder of medicine and called Avicenna in the West. He identified diseases including tuberculosis and meningitis and wrote Al-Qanoon and Fil Tib Al-Shafa."},
+    {"q":"Describe the relationships of biology to other sciences.","answer":"Biology is a multidimensional, interdisciplinary science.\n\n1. Biophysics: Laws and techniques of physics are applied to explain processes of life. Radioactive isotopes, radio-labeling, carbon-dating, ultrasound and laser technology are examples.\n2. Biomathematics/Biometry: The branch of mathematics which collects data of living organisms and plays an important role in research.\n3. Biochemistry: Study of molecules that form living organisms or cells, requiring knowledge of biology and chemistry.\n4. Biogeography: Deals with distribution of living organisms in different geographical regions.\n5. Bio-economics: Deals with economically important organisms involved in production, with cost and profit values considered."},
+    {"q":"Describe the levels of organization.","answer":"The levels of organization in the living world are based on chemical foundation.\n\n1. Atomic level: Matter is made of elements composed of atoms. Sixteen elements are bio-elements and are vital for life; C, H, O, N, S and P are the six basic elements of life.\n2. Molecular level: Atoms bind to form bio-molecules, classified as micro-molecules and macro-molecules.\n3. Cellular level: Biomolecules form protoplasm; when protoplasm works as a unit it is called a cell. Similar cells form tissues, tissues form organs, organs form organ systems, and organ systems form a multicellular organism.\n4. Taxonomic level: Species is the smallest unit of taxonomic organization and includes morphologically similar organisms that inter-breed and produce fertile offspring.\n5. Population level: All members of a species living in a specific habitat.\n6. Community level: Members of different species living in a specific habitat.\n7. Ecological system: Communities interact with their non-living environment; this interaction is called an ecosystem.\n8. Biosphere level: The part of earth where life exists; it consists of different kinds of ecosystems."}
+  ]
+}
