@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { ALL_QUESTIONS as EXISTING_QUESTIONS, CHAPTERS_LIST } from '../data/chaptersData';
-import chapter1 from '../data/chapter1.json';
+import chapter1 from '../../data/chapter1.json';
 import { STBB_MCQ_QUESTIONS } from '../data/stbbMcqs';
 import { Question, QuestionSubtype } from '../types';
 import { Search, Bookmark, BookmarkCheck, CheckCircle2, XCircle, HelpCircle, ChevronDown, ChevronUp, Copy, Check, BookOpen, ShieldCheck } from 'lucide-react';
