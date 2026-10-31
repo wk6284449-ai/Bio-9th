@@ -88,16 +88,21 @@ export default function App() {
 
       {activeView === 'studio' && (
         <footer className="border-t border-slate-200 bg-white mt-12 py-8 text-xs text-slate-500">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-slate-800">SindhBio 9</span>
-              <span>•</span>
-              <span>Sindh Textbook Board (STBB Jamshoro) Biology Preparation Portal</span>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-5">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-2 text-center sm:text-left">
+                <span className="font-bold text-slate-800">SindhBio 9</span>
+                <span>•</span>
+                <span>Sindh Textbook Board (STBB Jamshoro) Biology Preparation Portal</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <button onClick={() => setIsPolicyModalOpen(true)} className="hover:text-emerald-700 underline underline-offset-2">Sindh Board Paper Blueprint</button>
+                <button onClick={() => handleOpenMockModal()} className="hover:text-emerald-700 font-semibold">Generate Custom Paper</button>
+              </div>
             </div>
-            <div className="flex items-center gap-4">
-              <button onClick={() => setIsPolicyModalOpen(true)} className="hover:text-emerald-700 underline underline-offset-2">Sindh Board Paper Blueprint</button>
-              <button onClick={() => handleOpenMockModal()} className="hover:text-emerald-700 font-semibold">Generate Custom Paper</button>
-            </div>
+            <p className="border-t border-slate-100 pt-4 text-center text-slate-600">
+              Unofficial study aid based on the STBB Class 9 Biology textbook. Always verify with your textbook.
+            </p>
           </div>
         </footer>
       )}
